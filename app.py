@@ -1,4 +1,7 @@
 import streamlit as st
+
+st.set_page_config(page_title="Churn Prediction")
+
 import numpy as np
 import joblib
 
