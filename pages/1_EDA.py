@@ -30,3 +30,22 @@ plt.figure(figsize=(10, 6))
 sns.heatmap(numeric_df.corr(), annot=True, cmap="coolwarm")
 st.pyplot(plt)
 plt.clf()
+st.subheader("Geography-wise Churn Rate")
+
+geo_churn = df.groupby('Geography')['Exited'].mean() * 100
+
+fig, ax = plt.subplots()
+geo_churn.plot(kind='bar', ax=ax)
+
+ax.set_ylabel("Churn Rate (%)")
+
+st.pyplot(fig)
+st.subheader("Age Distribution")
+
+fig, ax = plt.subplots()
+df['Age'].hist(ax=ax, bins=20)
+
+ax.set_xlabel("Age")
+ax.set_ylabel("Customers")
+
+st.pyplot(fig)
