@@ -30,6 +30,15 @@ plt.figure(figsize=(10, 6))
 sns.heatmap(numeric_df.corr(), annot=True, cmap="coolwarm")
 st.pyplot(plt)
 plt.clf()
+st.subheader("Churn Distribution")
+
+fig, ax = plt.subplots()
+df['Exited'].value_counts().plot(kind='bar', ax=ax)
+
+ax.set_xlabel("Exited")
+ax.set_ylabel("Count")
+
+st.pyplot(fig)
 st.subheader("Geography-wise Churn Rate")
 
 geo_churn = df.groupby('Geography')['Exited'].mean() * 100
