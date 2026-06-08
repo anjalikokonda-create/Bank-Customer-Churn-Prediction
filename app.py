@@ -1,18 +1,17 @@
 import streamlit as st
-import pandas as pd
 
-st.set_page_config(page_title="Bank Churn Dashboard", layout="wide")
+st.set_page_config(page_title="Bank Customer Churn Prediction", layout="wide")
 
-st.title("Bank Customer Churn Analysis")
+st.title("🏦 Bank Customer Churn Prediction")
 
-# Load CSV
-df = pd.read_csv("data/raw/Churn_Modelling.csv")
+st.markdown("""
+### Welcome
 
-st.subheader("Raw Dataset")
-st.write(df)
+Use the pages in the sidebar:
 
-st.subheader("Show Code")
-st.code("""
-import pandas as pd
-df = pd.read_csv("data/raw/Churn_Modelling.csv")
+- EDA
+- Model Training
+- Prediction
+
+This project predicts customer churn using Machine Learning.
 """)
