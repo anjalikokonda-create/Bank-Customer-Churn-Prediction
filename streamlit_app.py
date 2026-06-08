@@ -1,8 +1,6 @@
 import streamlit as st
 import pandas as pd
 
-st.set_page_config(page_title="Bank Churn Dashboard", layout="wide")
-
 st.title("Bank Customer Churn Analysis")
 
 # Load CSV
